@@ -6,9 +6,9 @@
   <title>Steven Rogers</title>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <style>
+  </style>
 </head>
-<style>
-</style>
 <body>
   <h1>Starting Portfolio</h1>
 </body>
