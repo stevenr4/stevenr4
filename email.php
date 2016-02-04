@@ -40,7 +40,7 @@
       ->setPassword(getenv('GMAIL_PASS'));
 
     // Create the Mailer using your created Transport
-    $mailer = Swift_Mailer::newInstance($transport);
+    $mailer = Swift_Mailer::newInstance($transporter);
 
     // Create a message
     $message = Swift_Message::newInstance($subject)
