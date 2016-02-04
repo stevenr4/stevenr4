@@ -15,7 +15,7 @@
   <!-- Google Fonts -->
   <script type="text/javascript">
   WebFontConfig = {
-    google: { families: [ 'Lato:400,300,700:latin' ] }
+    google: { families: [ 'Lato:400,300,700:latin', 'Arvo:400,700:latin' ] }
   };
   (function() {
     var wf = document.createElement('script');
@@ -30,7 +30,14 @@
 </head>
 <body>
   <div class="container">
-    <div class="page">
+    <div class="page"> 
+      <div id="navbar-container">
+        <div class="navbar-item" id="navbar-item-contact" data-element-id="contact"><span>Contact</span></div>
+        <div class="navbar-item" id="navbar-item-portfolio" data-element-id="portfolio"><span>Portfolio</span></div>
+        <div class="navbar-item" id="navbar-item-experience" data-element-id="experience"><span>Experience</span></div>
+        <div class="navbar-item" id="navbar-item-skills" data-element-id="skills"><span>Skills</span></div>
+        <div class="navbar-item" id="navbar-item-about" data-element-id="about"><span>About</span></div>
+      </div>
       <div id="header-spacer"></div>
       <div id="following-header">
         <div class="row">
@@ -43,7 +50,7 @@
           </div>
         </div>
       </div>
-      <div class="segment">
+      <div class="segment" id="about">
         <div>
           <h3>About Steven</h3>
         </div>
@@ -57,7 +64,7 @@
         </div>
       </div>
 
-      <div class="segment">
+      <div class="segment" id="skills">
         <div>
           <h3>Skills</h3>
         </div>
@@ -269,7 +276,7 @@
         </div>
       </div>
 
-      <div class="segment">
+      <div class="segment" id="experience">
         <div>
           <h3>Experience</h3>
         </div>
@@ -321,74 +328,136 @@
               Check out my <a href="">github</a> to see some of my projects.
             </p>
           </div>
-          <!-- This will be initially hidden -->
-          <div id="experience-extra-hidden" class="initially-hidden">
-            <div class="experience-item">
-              <div class="experience-bar awaiting-scroll" data-set-width="35px"></div>
-              <h4>Petco</h4>
-              <p class="sub-title-dates">Sales&nbsp;Associate : Apr&nbsp;2013&nbsp;-&nbsp;Oct&nbsp;2013</p>
-              <p>
-                Was responsible for helping customers by informing them about the store’s products as well as taking
-                care of the in-store animals. Left position to attend RocketU.
-              </p>
-            </div>
-            <div class="experience-item">
-              <div class="experience-bar awaiting-scroll" data-set-width="35px"></div>
-              <h4>Tacobell</h4>
-              <p class="sub-title-dates">Manager : Nov&nbsp;2012&nbsp;-&nbsp;Apr&nbsp;2013</p>
-              <p>
-                Worked at Tacobell to help offset college costs. Was eventually promoted to manager for outstanding
-                work and took the morning shift full-time 5 days a week.
-              </p>
-            </div>
-            <div class="experience-item">
-              <div class="experience-bar awaiting-scroll" data-set-width="35px"></div>
-              <h4>Manpuku Sushi</h4>
-              <p class="sub-title-dates">Dishwasher : July&nbsp;2012&nbsp;-&nbsp;Apr&nbsp;2013</p>
-              <p>
-                Started as a dishwasher to offset college costs. Worked with a family-like team and learned necessary
-                communication skills.
-              </p>
-            </div>
-            <div class="experience-item">
-              <div class="experience-bar awaiting-scroll" data-set-width="35px"></div>
-              <h4>Dicky's BBQ Pit</h4>
-              <p class="sub-title-dates">Utility : July&nbsp;2010&nbsp;-&nbsp;Sept&nbsp;2010</p>
-              <p>
-                First job over high school summer.
-              </p>
-            </div>
-          </div>
-          <!-- End hidden section -->
-          <div class="experience-more">
-              <div class="experience-bar awaiting-scroll" data-set-width="35px"></div>
-            <p>Show Non-software Related Experience (+)</p>
-          </div>
         </div>
       </div>
 
-      <div class="segment">
+      <div class="segment" id="portfolio">
         <div>
           <h3>Portfolio</h3>
         </div>
         <h4>Professional&nbsp;Projects</h4>
         <div class="row">
-          <div class="col-xs-12 col-sm-6">
-            <img class="portfolio-image" />
-            <p class="portfolio-title">The&nbsp;Mortgage&nbsp;Reports<br>Mortgage&nbsp;Calculator</p>
-            <p>
-            </p>
+          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+            <a href="http://themortgagereports.com/mortgage-calculator" target="_blank">
+              <p class="portfolio-title">The&nbsp;Mortgage&nbsp;Reports</p>
+              <p class="portfolio-subtitle">Mortgage&nbsp;Calculator</p>
+              <img class="portfolio-image" src="images/example-tmr.png" />
+              <p>
+                I was asked to create a mortgage calculator that would answer the questions:
+                <span class="italic">"What would my monthly payment be?"</span>,
+                <span class="italic">"How much can I afford?"</span>,
+                and <span class="italic">"What can I get for [x] monthly payment?"</span>.<br/>
+                I created this calculator and came up with this functional design.
+              </p>
+              View&nbsp;Live&nbsp;Site
+            </a>
           </div>
+
+          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+            <a href="http://nurse.org" target="_blank">
+              <p class="portfolio-title">Nurse.org</p>
+              <p class="portfolio-subtitle">Home&nbsp;Page</p>
+              <img class="portfolio-image" src="images/example-nurseorg.png" />
+              <p>
+                Working with a talented designer, we were able to make a fully responsive interactive page. This
+                required PHP to pull in blog posts, advanced CSS techniques to accomplish layering and transitions,
+                and in depth communication to create a look and feel desired.
+              </p>
+              View&nbsp;Live&nbsp;Site
+            </a>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+            <a href="http://www.travelnursing.org/top-10-travel-nursing-states.php#form-top" target="_blank">
+              <p class="portfolio-title">TravelNursing.org</p>
+              <p class="portfolio-subtitle">Form&nbsp;Page</p>
+              <img class="portfolio-image" src="images/example-tn.png" />
+              <p>
+                This page took a good amount of both CSS to make it responsive and beautiful and Javascript for form
+                validation and clicking through the form step by step.
+              </p>
+              View&nbsp;Live&nbsp;Site
+            </a>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+            <a href="http://mymortgageinsider.com" target="_blank">
+              <p class="portfolio-title">MyMortgageInsider.com</p>
+              <p class="portfolio-subtitle">Entire&nbsp;Site</p>
+              <img class="portfolio-image" src="images/example-mmi.png" />
+              <p>
+                The site was using a parent Wordpress theme, and our marketing team wanted more control over
+                many of the elements. One of my tasks was to re-write the theme from scratch, making it light
+                weight and flexible while holding the same look and feel.
+              </p>
+              View&nbsp;Live&nbsp;Site
+            </a>
+          </div>
+
+
         </div>
         <h4>Personal&nbsp;Projects</h4>
         <div class="row">
-          <div class="col-xs-12 col-sm-6">
-            <img class="portfolio-image" />
+
+          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+            <a href="http://jsfiddle.net/stevenr4/xzffdxcc/" target="_blank">
+              <p class="portfolio-title">Mandelbrot&nbsp;Set</p>
+              <p class="portfolio-subtitle">Fractal&nbsp;Rendering</p>
+              <img class="portfolio-image" src="images/example-mandelbrot-set.png" />
+              <p>
+                The Mandelbrot set is a complicated complex-number function. This generates an infinite and never
+                repeating image that is beautifully colored and stunning to explore. Go ahead! I encourage you to
+                try it!
+              </p>
+              View&nbsp;Demo
+            </a>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+            <a href="http://lag-pong.herokuapp.com/" target="_blank">
+              <p class="portfolio-title">Lag&nbsp;Pong</p>
+              <p class="portfolio-subtitle">Real-Time&nbsp;Multiplayer&nbsp;Game</p>
+              <img class="portfolio-image" src="images/example-lag-pong.png" />
+              <p>
+                "Lag Pong" got its name after I got deep into development. It was an attempt to make a real-time game
+                using websockets. Dealing with the lag became a running joke amongst friends so I intentionally left it
+                laggy, but it is still fully functional. Just send the link to your friend and try it out.
+              </p>
+              View&nbsp;Demo
+            </a>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+            <a href="http://jsfiddle.net/stevenr4/w9deox41/" target="_blank">
+              <p class="portfolio-title">Sudoku&nbsp;Solver</p>
+              <p class="portfolio-subtitle">Logical&nbsp;Puzzle</p>
+              <img class="portfolio-image" src="images/example-sudoku-solver.png" />
+              <p>
+                Sudoku has always been one of my favorite pass-times. After realizing I solve it like a robot, going
+                through a repeat of motions, I decided to code up my method for solving these puzzles. This solver
+                is the result of my work. It's not 100% perfect and can be improved.
+              </p>
+              View&nbsp;Demo
+            </a>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+            <a href="http://jsfiddle.net/stevenr4/pkd0h55m/" target="_blank">
+              <p class="portfolio-title">Roman&nbsp;Numeral&nbsp;Calculator</p>
+              <p class="portfolio-subtitle">Algorithm</p>
+              <img class="portfolio-image" src="images/example-roman-numeral.png" />
+              <p>
+                I found myself wanting to know how roman numerals work, so I wrote up a small piece of javascript that
+                turns base 10 numbers into roman numerals or vise versa. I am proud of finding a simple solution to
+                this age old problem.
+              </p>
+              View&nbsp;Demo
+            </a>
           </div>
         </div>
       </div>
 
-      <div class="segment">
+      <div class="segment" id="more-about">
         <div>
           <h3>More About Steven</h3>
         </div>
@@ -407,7 +476,7 @@
       </div>
 
 
-      <div class="segment">
+      <div class="segment" id="contact">
         <div>
           <h3>Contact Steven</h3>
         </div>
@@ -443,7 +512,7 @@
               </div>
               <div class="form-row">
                 <label>Message<span class="red">*</span></label>
-                <textarea name="content" class="form-control"></textarea>
+                <textarea name="message" class="form-control"></textarea>
               </div>
               <div class="form-row">
                 <div style="width: 100%" class="g-recaptcha" data-sitekey="6LfrNRcTAAAAAGyHnfc-S0JiToIy5jZvv3xsX_2s"></div>
@@ -456,6 +525,12 @@
         </div>
       </div>
 
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container text-center">
+      <p>Many thanks to Natalie,<br/>the mind behind <a href="cre8ive.ly" target="_blank">Cre8ive.ly</a> for design tips.</p>
+      <p>This site, along with other many projects, can be found on my <a href="https://github.com/stevenr4" target="_blank">github</a>.</p>
     </div>
   </div>
 </body>
