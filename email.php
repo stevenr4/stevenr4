@@ -32,7 +32,7 @@
     );
 
     // Require the swift library
-    require_once 'lib/swift_required.php';
+    require_once 'vendor/swiftmailer/swiftmailer/lib/swift_required.php';
 
     // Create the Transport, attach to GMAIL's smtp service
     $transporter = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
