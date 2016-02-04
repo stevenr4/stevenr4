@@ -36,8 +36,8 @@
 
     // Create the Transport, attach to GMAIL's smtp service
     $transporter = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
-      ->setUsername($this->"stevenr4@stevenr4.com")
-      ->setPassword($this->getenv('GMAIL_PASS'));
+      ->setUsername("stevenr4@stevenr4.com")
+      ->setPassword(getenv('GMAIL_PASS'));
 
     // Create the Mailer using your created Transport
     $mailer = Swift_Mailer::newInstance($transport);
