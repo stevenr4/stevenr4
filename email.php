@@ -19,13 +19,8 @@
       $name = $_REQUEST['name'];
     }
 
-    // Pear Mail Library
-    require_once "Mail.php";
-
-    $from = 'stevenr4@stevenr4.com';
-    $to = 'stevenr180@gmail.com';
-    $subject = 'CONTACT! ('.$name.')';
-    $body = "Sender: (" . $return_email . ")\n" .
+    $subject = 'CONTACT from name:(' . $name . '), email:(' . $requester . ')';
+    $body = "Sender: (" . $requester . ")\n" .
             "Phone: (" . $phone . ")\n" .
             "Name: (" . $name . ")\n" .
             "Message: " . $msg;
@@ -36,26 +31,27 @@
       'Subject' => $subject
     );
 
-    $smtp = Mail::factory('smtp', array(
-        'host' => 'ssl://smtp.gmail.com',
-        'port' => '465',
-        'auth' => true,
-        'username' => 'stevenr4@stevenr4.com',
-        'password' => getenv('GMAIL_PASS')
-      ));
-if (PEAR::isError($smtp)) {
-    echo $smtp->getMessage() . "\n" . $smtp->getUserInfo() . "\n";
-    die();
-}
+    // Require the swift library
+    require_once 'lib/swift_required.php';
 
-    $mail = $smtp->send($to, $headers, $body);
+    // Create the Transport, attach to GMAIL's smtp service
+    $transporter = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
+      ->setUsername($this->"stevenr4@stevenr4.com")
+      ->setPassword($this->getenv('GMAIL_PASS'));
 
-    if (PEAR::isError($mail)) {
-      $output['success'] = 'false';
-      $output['reason'] = $mail->getMessage();
-    } else {
-      $output['success'] = 'true';
-    }
+    // Create the Mailer using your created Transport
+    $mailer = Swift_Mailer::newInstance($transport);
+
+    // Create a message
+    $message = Swift_Message::newInstance($subject)
+      ->setFrom(array('info@stevenr4.com' => 'Info'))
+      ->setTo(array('stevenr4@stevenr4.com', 'stevenr180@gmail.com'))
+      ->setBody($body)
+      ;
+
+    // Send the message
+    $result = $mailer->send($message);
+    $output['success'] = 'true';
   } else {
     $output['success'] = 'false';
   }
