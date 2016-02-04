@@ -83,8 +83,9 @@ $(document).ready(function(){
             'message': $("input[name=message]").val()
         }
         e.preventDefault();
+        console.log("Attempting...");
         $.post("/email.php", function(data) {
-            $(".result").html(data);
+            console.log(data);
         });
         return false;
     });
