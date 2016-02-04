@@ -31,13 +31,16 @@
 <body>
   <div class="container">
     <div class="page">
-      <div class="row">
-        <div class="col-xs-12 col-sm-9">
-          <h1>Steven Rogers</h1>
-          <h2>Full Stack Web Developer</h2>
-        </div>
-        <div class="col-xs-12 col-sm-3">
+      <div id="header-spacer"></div>
+      <div id="following-header">
+        <div class="row">
+          <div class="col-xs-12 col-sm-9">
+            <h1>Steven Rogers</h1>
+            <h2>Full Stack Web Developer</h2>
+          </div>
+          <div class="col-xs-12 col-sm-3">
 
+          </div>
         </div>
       </div>
       <div class="segment">
@@ -166,11 +169,53 @@
           <table class="skill-table">
             <tr>
               <td class="title">
+                Teamwork
+              </td>
+              <td class="bar">
+                <div class="bar-outer">
+                  <div class="bar-inner awaiting-scroll" data-set-width="89%">
+                  </div>
+                </div>
+              </td>
+              <td class="count">
+                3+&nbsp;Years
+              </td>
+            </tr>
+            <tr>
+              <td class="title">
+                Git
+              </td>
+              <td class="bar">
+                <div class="bar-outer">
+                  <div class="bar-inner awaiting-scroll" data-set-width="85%">
+                  </div>
+                </div>
+              </td>
+              <td class="count">
+                3+&nbsp;Years
+              </td>
+            </tr>
+            <tr>
+              <td class="title">
                 Django
               </td>
               <td class="bar">
                 <div class="bar-outer">
                   <div class="bar-inner awaiting-scroll" data-set-width="75%">
+                  </div>
+                </div>
+              </td>
+              <td class="count">
+                3+&nbsp;Years
+              </td>
+            </tr>
+            <tr>
+              <td class="title">
+                Algorithms
+              </td>
+              <td class="bar">
+                <div class="bar-outer">
+                  <div class="bar-inner awaiting-scroll" data-set-width="73%">
                   </div>
                 </div>
               </td>
@@ -194,34 +239,6 @@
             </tr>
             <tr>
               <td class="title">
-                Git
-              </td>
-              <td class="bar">
-                <div class="bar-outer">
-                  <div class="bar-inner awaiting-scroll" data-set-width="85%">
-                  </div>
-                </div>
-              </td>
-              <td class="count">
-                3+&nbsp;Years
-              </td>
-            </tr>
-            <tr>
-              <td class="title">
-                AWS
-              </td>
-              <td class="bar">
-                <div class="bar-outer">
-                  <div class="bar-inner awaiting-scroll" data-set-width="25%">
-                  </div>
-                </div>
-              </td>
-              <td class="count">
-                1+&nbsp;Years
-              </td>
-            </tr>
-            <tr>
-              <td class="title">
                 Mysql
               </td>
               <td class="bar">
@@ -236,30 +253,16 @@
             </tr>
             <tr>
               <td class="title">
-                Teamwork
+                AWS
               </td>
               <td class="bar">
                 <div class="bar-outer">
-                  <div class="bar-inner awaiting-scroll" data-set-width="89%">
+                  <div class="bar-inner awaiting-scroll" data-set-width="25%">
                   </div>
                 </div>
               </td>
               <td class="count">
-                3+&nbsp;Years
-              </td>
-            </tr>
-            <tr>
-              <td class="title">
-                Algorithms
-              </td>
-              <td class="bar">
-                <div class="bar-outer">
-                  <div class="bar-inner awaiting-scroll" data-set-width="73%">
-                  </div>
-                </div>
-              </td>
-              <td class="count">
-                3+&nbsp;Years
+                1+&nbsp;Years
               </td>
             </tr>
           </table>
@@ -446,7 +449,7 @@
                 <div style="width: 100%" class="g-recaptcha" data-sitekey="6LfrNRcTAAAAAGyHnfc-S0JiToIy5jZvv3xsX_2s"></div>
               </div>
               <div class="form-row">
-                <input type="submit" value="Send" class="btn btn-lg btn-success" />
+                <input id="contact-submit" type="submit" value="Send" class="btn btn-lg btn-success" />
               </div>
             </form>
           </div>

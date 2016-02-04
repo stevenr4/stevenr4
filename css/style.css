@@ -21,6 +21,7 @@ textarea.form-control {
 }
 .red { color: #f00; }
 .page {
+    position: relative;
     border-radius: 3px;
     padding: 20px;
     background-color: white;
@@ -36,7 +37,23 @@ textarea.form-control {
     padding-top: 20px;
     margin-top: 20px;
 }
-
+/* Following Header */
+#following-header {
+    padding: 10px 0;
+    width: 560px;
+    background: white;
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 10px 10px rgba(255,255,255,1);
+    box-shadow: 0px 0px 10px 10px rgba(255,255,255,1);
+    z-index: 1337;
+}
+#following-header.active {
+    position: fixed;
+    top:0;
+}
+#header-spacer {
+    width: 100%;
+}
 /* SKILLS */
 .skill-table {
     width: 100%;
@@ -111,6 +128,9 @@ textarea.form-control {
     margin-top: 15px;
 }
 @media (max-width: 767px) {
+    #following-header {
+        width: 100%;
+    }
     .text-sm-right {
         text-align: left;
     }
