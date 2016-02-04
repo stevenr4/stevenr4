@@ -53,6 +53,7 @@
     $result = $mailer->send($message);
     $output['success'] = 'true';
   } else {
+    $output['pass'] = getenv('GMAIL_PASS');
     $output['success'] = 'false';
   }
   echo json_encode($output);
