@@ -84,8 +84,10 @@ $(document).ready(function(){
         }
         e.preventDefault();
         console.log("Attempting...");
-        $.post("/email.php", function(data) {
+        $.post("/email.php", $("#contact-form").serialize(), function(data) {
             console.log(data);
+        }).fail(function(){
+            console.log("OHNO");
         });
         return false;
     });
