@@ -76,6 +76,7 @@ $(document).ready(function(){
 
     // Form stuff here!
     $("#contact-submit").click(function(e){
+        $("#contact-form :input").attr('disabled', 'disabled').css('cursor', 'wait');
         var data = {
             'email': $("input[name=email]").val(),
             'name': $("input[name=name]").val(),
@@ -83,11 +84,10 @@ $(document).ready(function(){
             'message': $("input[name=message]").val()
         }
         e.preventDefault();
-        console.log("Attempting...");
         $.post("/email.php", $("#contact-form").serialize(), function(data) {
             console.log(data);
         }).fail(function(){
-            console.log("OHNO");
+            console.log("FAILED");
         });
         return false;
     });
