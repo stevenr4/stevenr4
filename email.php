@@ -1,22 +1,22 @@
 <?php
-  $output = $_POST;
-  if ((isset($_POST["email"]) && !empty($_POST["email"])) &&
-      (isset($_POST["message"]) && !empty($_POST["message"]))) {
+  $output = $_REQUEST;
+  if ((isset($_REQUEST["email"]) && !empty($_REQUEST["email"])) &&
+      (isset($_REQUEST["message"]) && !empty($_REQUEST["message"]))) {
 
       // the message
-      $msg = $_POST['message'];
+      $msg = $_REQUEST['message'];
       // use wordwrap() if lines are longer than 70 characters
       $msg = wordwrap($msg,70);
-      $return_email = $_POST['email'];
+      $return_email = $_REQUEST['email'];
 
       $phone = "";
-      if (isset($_POST["phone"]) && !empty($_POST["phone"])) {
-        $phone = $_POST['phone'];
+      if (isset($_REQUEST["phone"]) && !empty($_REQUEST["phone"])) {
+        $phone = $_REQUEST['phone'];
       }
 
       $name = "";
-      if (isset($_POST["name"]) && !empty($_POST["name"])) {
-        $name = $_POST['name'];
+      if (isset($_REQUEST["name"]) && !empty($_REQUEST["name"])) {
+        $name = $_REQUEST['name'];
       }
 
       // send email
@@ -41,4 +41,5 @@
     $output['success'] = 'false';
   }
   echo json_encode($output);
+  echo $_REQUEST;
 ?>
