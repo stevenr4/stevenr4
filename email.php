@@ -7,7 +7,7 @@
     $msg = $_REQUEST['message'];
     // use wordwrap() if lines are longer than 70 characters
     $msg = wordwrap($msg,70);
-    $from = $_REQUEST['email'];
+    $requester = $_REQUEST['email'];
 
     $phone = "";
     if (isset($_REQUEST["phone"]) && !empty($_REQUEST["phone"])) {
@@ -22,6 +22,7 @@
     // Pear Mail Library
     require_once "Mail.php";
 
+    $from = 'stevenr4@stevenr4.com';
     $to = 'stevenr180@gmail.com';
     $subject = 'CONTACT! ('.$name.')';
     $body = "Sender: (" . $return_email . ")\n" .
@@ -30,27 +31,31 @@
             "Message: " . $msg;
 
     $headers = array(
-        'From' => $from,
-        'To' => $to,
-        'Subject' => $subject
+      'From' => $from,
+      'To' => $to,
+      'Subject' => $subject
     );
 
     $smtp = Mail::factory('smtp', array(
-            'host' => 'ssl://smtp.gmail.com',
-            'port' => '465',
-            'auth' => true,
-            'username' => 'johndoe@gmail.com',
-            'password' => getenv('GMAIL_PASS')
-        ));
+        'host' => 'ssl://smtp.gmail.com',
+        'port' => '465',
+        'auth' => true,
+        'username' => 'stevenr4@stevenr4.com',
+        'password' => getenv('GMAIL_PASS')
+      ));
+if (PEAR::isError($smtp)) {
+    echo $smtp->getMessage() . "\n" . $smtp->getUserInfo() . "\n";
+    die();
+}
 
     $mail = $smtp->send($to, $headers, $body);
 
     if (PEAR::isError($mail)) {
-        echo('<p>' . $mail->getMessage() . '</p>');
+      $output['success'] = 'false';
+      $output['reason'] = $mail->getMessage();
     } else {
-        echo('<p>Message successfully sent!</p>');
+      $output['success'] = 'true';
     }
-    $output['success'] = 'true';
   } else {
     $output['success'] = 'false';
   }
