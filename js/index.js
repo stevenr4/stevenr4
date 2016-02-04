@@ -77,10 +77,10 @@ $(document).ready(function(){
     // Form stuff here!
     $("#contact-submit").click(function(e){
         var data = {
-            'email': $("input[name=email]").value(),
-            'name': $("input[name=name]").value(),
-            'phone': $("input[name=phone]").value(),
-            'message': $("input[name=message]").value()
+            'email': $("input[name=email]").val(),
+            'name': $("input[name=name]").val(),
+            'phone': $("input[name=phone]").val(),
+            'message': $("input[name=message]").val()
         }
         e.preventDefault();
         $.post("/email.php", function(data) {
