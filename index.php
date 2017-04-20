@@ -30,7 +30,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="page"> 
+    <div class="page">
       <div id="navbar-container">
         <div class="navbar-item" id="navbar-item-contact" data-element-id="contact"><span>Contact</span></div>
         <div class="navbar-item" id="navbar-item-portfolio" data-element-id="portfolio"><span>Portfolio</span></div>
@@ -529,8 +529,8 @@
   </div>
   <div class="footer">
     <div class="container text-center">
-      <p>Many thanks to Natalie,<br/>the mind behind <a href="cre8ive.ly" target="_blank">Cre8ive.ly</a> for design tips.</p>
-      <p>This site, along with other many projects, can be found on my <a href="https://github.com/stevenr4" target="_blank">github</a>.</p>
+      <p>Many thanks to <a href="https://www.linkedin.com/in/natalie-broussard/">Natalie Broussard</a> for inspiration and help in designing this site.</p>
+      <p>This site, along with other projects, can be found on my <a href="https://github.com/stevenr4" target="_blank">github</a>.</p>
     </div>
   </div>
 </body>
