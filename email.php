@@ -11,7 +11,7 @@
     if (isset($_REQUEST["phone"]) && !empty($_REQUEST["phone"])) { $phone = $_REQUEST['phone']; }
     $name = "";
     if (isset($_REQUEST["name"]) && !empty($_REQUEST["name"])) { $name = $_REQUEST['name']; }
-    
+
 
 
     // Validate the requester email:
@@ -22,10 +22,10 @@
         die();
     }
 
-    $subject = 'CONTACT from name:(' . $name . '), email:(' . $requester . ')';
-    $body = "Sender: (" . $requester . ")\n" .
-            "Phone: (" . $phone . ")\n" .
-            "Name: (" . $name . ")\n" .
+    $subject = 'stevenr4.com contact request from name:(' . $name . '), email:(' . $requester . ')';
+    $body = "Sender: ( " . $requester . " )\n" .
+            "Phone: ( " . $phone . " )\n" .
+            "Name: ( " . $name . " )\n" .
             "Message: " . $msg;
 
     $headers = array(
@@ -56,7 +56,7 @@
     $message = Swift_Message::newInstance("Steven Rogers (automated response)")
       ->setFrom(array('info@stevenr4.com' => 'Info'))
       ->setTo(array($requester))
-      ->setBody("Dear " . $name . ",\n\n\tThank you for reaching out to me.\nThe following message has been sent to my email inbox\nand I will get back to you shortly.\n\n" . $body)
+      ->setBody("Dear " . $name . ",\n\n\tThank you for reaching out to Steven ROgers.\nBelow is the message that has been sent to Steven Rogers's email address stevenr180@gmail.com\n\nSteven will get back to you as soon as he is able.\n\n\nEMAIL:\n" . $body)
       ;
     // Send the user-facing message
     $result = $mailer->send($message);

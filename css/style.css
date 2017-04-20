@@ -1,19 +1,58 @@
-
-body { background-color: #4A148C;
+body {
+    background-color: #4A148C;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#712cb7+0,342a89+100 */
-    background: rgb(113,44,183); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(113,44,183,1) 0%, rgba(52,42,137,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(113,44,183,1) 0%,rgba(52,42,137,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(113,44,183,1) 0%,rgba(52,42,137,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#712cb7', endColorstr='#342a89',GradientType=0 ); /* IE6-9 */
+
+    background: rgb(113, 44, 183);
+    /* Old browsers */
+
+    background: -moz-linear-gradient(top, rgba(113, 44, 183, 1) 0%, rgba(52, 42, 137, 1) 100%);
+    /* FF3.6-15 */
+
+    background: -webkit-linear-gradient(top, rgba(113, 44, 183, 1) 0%, rgba(52, 42, 137, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+
+    background: linear-gradient(to bottom, rgba(113, 44, 183, 1) 0%, rgba(52, 42, 137, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#712cb7', endColorstr='#342a89', GradientType=0);
+    /* IE6-9 */
+
     background-attachment: fixed;
-    font-family: "lato", "Helvetica Neue",Helvetica,Arial,sans-serif;}
-h1, h2, h3, h4, h5, h6 { margin-top: 0; }
-h1 { font-weight: bold; margin-bottom: 0px; font-family: "Arvo","lato", "Helvetica Neue",Helvetica,Arial,sans-serif; text-transform: uppercase; }
-h2 { font-weight: bold; color: #888; font-size: 20px; letter-spacing: 4px; text-transform: uppercase; font-size:16px; }
-h3 { font-weight: bold; margin-bottom: 20px;  font-family: "Arvo","lato", "Helvetica Neue",Helvetica,Arial,sans-serif; }
-h4 { margin-top: 20px; }
-label { margin-top: 5px; }
+    font-family: "lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+}
+h1 {
+    font-weight: bold;
+    margin-bottom: 0px;
+    font-family: "Arvo", "lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+}
+h2 {
+    font-weight: bold;
+    color: #888;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: "Arvo", "lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h4 {
+    margin-top: 20px;
+}
+label {
+    margin-top: 5px;
+}
 textarea.form-control {
     height: 100px;
 }
@@ -23,9 +62,9 @@ p {
 .initially-hidden {
     display: none;
 }
-.red { color: #f00; }
-
-
+.red {
+    color: #f00;
+}
 .page {
     position: relative;
     border-radius: 3px;
@@ -44,6 +83,7 @@ p {
     margin-top: 20px;
 }
 /* Navbar stuff */
+
 #navbar-container {
     height: 30px;
     width: 560px;
@@ -70,23 +110,25 @@ p {
     background-color: #ddd;
 }
 /* Following Header */
+
 #following-header {
     padding: 10px 0;
     width: 560px;
     background: white;
-    -webkit-box-shadow: 0px 0px 10px 10px rgba(255,255,255,1);
-    -moz-box-shadow: 0px 0px 10px 10px rgba(255,255,255,1);
-    box-shadow: 0px 0px 10px 10px rgba(255,255,255,1);
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 1);
     z-index: 1337;
 }
 #following-header.active {
     position: fixed;
-    top:0;
+    top: 0;
 }
 #header-spacer {
     width: 100%;
 }
 /* SKILLS */
+
 .skill-table {
     width: 100%;
 }
@@ -113,8 +155,8 @@ p {
     border-radius: 4px 0px 0px 4px;
     background-color: rgb(100, 44, 174);
 }
-
 /* EXPERIENCE */
+
 #experience-content {
     border-left: 8px solid rgb(100, 44, 174);
 }
@@ -144,14 +186,12 @@ p {
 #experience-content .experience-more .experience-bar {
     bottom: 0;
 }
-#experience-content .experience-more {
-}
-#experience-content .experience-more p {
+#experience-content .experience-more {} #experience-content .experience-more p {
     margin-top: 10px;
-    margin-bottom:-5px;
+    margin-bottom: -5px;
 }
-
 /* PORTFOLIO */
+
 .portfolio-object {
     position: relative;
     top: 30px;
@@ -193,21 +233,30 @@ p {
     transition-delay: 0s;
     opacity: 0.6;
 }
-.portfolio-object:nth-child(1){transition-delay:0.00s;}
-.portfolio-object:nth-child(2){transition-delay:0.15s;}
-.portfolio-object:nth-child(3){transition-delay:0.30s;}
-.portfolio-object:nth-child(4){transition-delay:0.45s;}
-.portfolio-object:nth-child(5){transition-delay:0.60s;}
-.portfolio-object:nth-child(6){transition-delay:0.75s;}
-
-
+.portfolio-object:nth-child(1) {
+    transition-delay: 0.00s;
+}
+.portfolio-object:nth-child(2) {
+    transition-delay: 0.15s;
+}
+.portfolio-object:nth-child(3) {
+    transition-delay: 0.30s;
+}
+.portfolio-object:nth-child(4) {
+    transition-delay: 0.45s;
+}
+.portfolio-object:nth-child(5) {
+    transition-delay: 0.60s;
+}
+.portfolio-object:nth-child(6) {
+    transition-delay: 0.75s;
+}
 .text-sm-right {
     text-align: right;
 }
 .form-row {
     margin-top: 15px;
 }
-
 .footer {
     width: 100%;
     background-color: #222;
@@ -231,7 +280,8 @@ p {
         width: 100%;
         float: none;
     }
-    .g-recaptcha div, .g-recaptcha iframe {
+    .g-recaptcha div,
+    .g-recaptcha iframe {
         width: 100% !important;
     }
 }
