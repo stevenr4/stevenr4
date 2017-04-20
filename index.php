@@ -491,15 +491,15 @@
                   <label>Email<span class="red">*</span></label>
                 </div>
                 <div class="col-sm-10 col-xs-12">
-                  <input name="email" type="email" class="form-control" />
+                  <input name="email" id="email" type="email" class="form-control" />
                 </div>
               </div>
               <div class="row form-row">
                 <div class="col-sm-2 col-xs-12 text-sm-right">
-                  <label>Name</label>
+                  <label>Full Name</label>
                 </div>
                 <div class="col-sm-10 col-xs-12">
-                  <input name="name" type="text" class="form-control" />
+                  <input name="name" id="name" type="text" class="form-control" />
                 </div>
               </div>
               <div class="row form-row">
@@ -507,12 +507,12 @@
                   <label>Phone</label>
                 </div>
                 <div class="col-sm-10 col-xs-12">
-                  <input name="phone" type="tel" class="form-control" />
+                  <input name="phone" id="phone" type="tel" class="form-control" />
                 </div>
               </div>
               <div class="form-row">
                 <label>Message<span class="red">*</span></label>
-                <textarea name="message" class="form-control"></textarea>
+                <textarea name="message" id="message" class="form-control"></textarea>
               </div>
               <div class="form-row">
                 <div style="width: 100%" class="g-recaptcha" data-sitekey="6LfrNRcTAAAAAGyHnfc-S0JiToIy5jZvv3xsX_2s"></div>

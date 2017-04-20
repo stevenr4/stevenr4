@@ -1,5 +1,6 @@
 <?php
   $output = $_REQUEST;
+
   if ((isset($_REQUEST["email"]) && !empty($_REQUEST["email"])) &&
       (isset($_REQUEST["message"]) && !empty($_REQUEST["message"]))) {
 
@@ -22,17 +23,11 @@
         die();
     }
 
-    $subject = 'stevenr4.com contact request from name:(' . $name . '), email:(' . $requester . ')';
-    $body = "Sender: ( " . $requester . " )\n" .
-            "Phone: ( " . $phone . " )\n" .
-            "Name: ( " . $name . " )\n" .
+    $subject = 'stevenr4.com contact request from: name( ' . $name . ' ), email( ' . $requester . ' )';
+    $body = "Sender: ( " . $requester . " )\n\n" .
+            "Phone: ( " . $phone . " )\n\n" .
+            "Name: ( " . $name . " )\n\n" .
             "Message: " . $msg;
-
-    $headers = array(
-      'From' => $from,
-      'To' => $to,
-      'Subject' => $subject
-    );
 
     // Require the swift library
     require_once 'vendor/swiftmailer/swiftmailer/lib/swift_required.php';
@@ -45,7 +40,7 @@
 
     // Create the message to myself
     $message = Swift_Message::newInstance($subject)
-      ->setFrom(array('info@stevenr4.com' => 'Info'))
+      ->setFrom(array('noreply@stevenr4.com' => 'Info'))
       ->setTo(array('stevenr4@stevenr4.com', 'stevenr180@gmail.com'))
       ->setBody($body)
       ;
@@ -56,13 +51,18 @@
     $message = Swift_Message::newInstance("Steven Rogers (automated response)")
       ->setFrom(array('info@stevenr4.com' => 'Info'))
       ->setTo(array($requester))
-      ->setBody("Dear " . $name . ",\n\n\tThank you for reaching out to Steven ROgers.\nBelow is the message that has been sent to Steven Rogers's email address stevenr180@gmail.com\n\nSteven will get back to you as soon as he is able.\n\n\nEMAIL:\n" . $body)
+      ->setBody("Dear " . $name . "Thank you for reaching out to Steven Rogers. This email is an automatic message confirming your contact request has been processed. Steven will get back to you as soon as he is able.\n\n\n---------- Below is a copy of information that was sent to Steven Rogers ----------\n\n" . $body)
       ;
     // Send the user-facing message
     $result = $mailer->send($message);
+
     $output['success'] = 'true';
   } else {
     $output['success'] = 'false';
+    $output['reason'] = "Missing Information";
+    $output['request'] = var_export($_REQUEST, true);
+    $output['get'] = var_export($_GET, true);
+    $output['post'] = var_export($_POST, true);
   }
   echo json_encode($output);
 ?>

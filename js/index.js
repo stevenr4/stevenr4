@@ -76,19 +76,43 @@ $(document).ready(function(){
 
     // Form stuff here!
     $("#contact-submit").click(function(e){
-        $("#contact-form :input").attr('disabled', 'disabled').css('cursor', 'wait');
-        var data = {
-            'email': $("input[name=email]").val(),
-            'name': $("input[name=name]").val(),
-            'phone': $("input[name=phone]").val(),
-            'message': $("input[name=message]").val()
-        }
+        // Once it's being submitted, lock the inputs
+        $("#contact-form :input").prop('disabled', true).css('cursor', 'wait');
+
+        // Collect together the formData
+        var formData = {
+            'email': $("#email").val(),
+            'name': $("#name").val(),
+            'phone': $("#phone").val(),
+            'message': $("#message").val()
+        };
+
+        // Don't let the form do the normal thing
         e.preventDefault();
-        $.post("/email.php", $("#contact-form").serialize(), function(data) {
-            console.log(data);
+
+        console.log(formData);
+
+        // Post the information to the website
+        $.post("/email.php", formData, function(returnedData) {
+            console.log(returnedData);
+            if (returnedData['success'] === "false") {
+
+                var message = "There was a problem handling your contact request.\nReason: ";
+                if (returnedData['reason']) {
+                    message += returnedData['reason'];
+                } else {
+                    message += 'Unknown Error';
+                }
+                alert("There was a problem handling your contact request.\nReason: " + returnedData['reason']);
+                $("#contact-form :input").prop('disabled', false).css('cursor', '');
+            } else {
+                // TODO: Show successful contact message
+            }
         }).fail(function(){
             console.log("FAILED");
         });
+
+        // Also helps prevent the form from doing the normal thing.
         return false;
     });
 });
@@ -186,7 +210,7 @@ var EPPZScrollTo =
     scrollVerticalToElementById: function(id, padding)
     {
         var element = document.getElementById(id);
-        if (element == null)
+        if (element === null)
         {
             console.warn('Cannot find element with id \''+id+'\'.');
             return;
