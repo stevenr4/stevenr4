@@ -176,7 +176,7 @@ p {
     position: absolute;
     left: 0;
     transition: width 0.5s;
-    width: 0px;
+    width: 0;
     height: 8px;
     background: rgb(100, 44, 174);
 }

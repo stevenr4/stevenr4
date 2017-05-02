@@ -21,6 +21,8 @@
 
 $(document).ready(function(){
     $(document).on('scroll', function(event) {
+
+        // Activates elements that were waiting to be scrolled onto
         $(".awaiting-scroll").each(function(){
             var viewBottom = $(window).scrollTop() + $(window).height();
             var elemTop = $(this).offset().top;
@@ -31,6 +33,7 @@ $(document).ready(function(){
             }
         });
 
+        // Handles the header to allow it to follow when needed.
         var viewTop = $(window).scrollTop();
         var elemTop = $('#header-spacer').offset().top;
         $("#following-header").css('width', $('#header-spacer').width() + "px");
