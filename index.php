@@ -115,6 +115,20 @@
             </tr>
             <tr>
               <td class="title">
+                PHP
+              </td>
+              <td class="bar">
+                <div class="bar-outer">
+                  <div class="bar-inner awaiting-scroll" data-set-width="82%">
+                  </div>
+                </div>
+              </td>
+              <td class="count">
+                3+&nbsp;Years
+              </td>
+            </tr>
+            <tr>
+              <td class="title">
                 Python
               </td>
               <td class="bar">
@@ -129,25 +143,11 @@
             </tr>
             <tr>
               <td class="title">
-                PHP
-              </td>
-              <td class="bar">
-                <div class="bar-outer">
-                  <div class="bar-inner awaiting-scroll" data-set-width="60%">
-                  </div>
-                </div>
-              </td>
-              <td class="count">
-                2+&nbsp;Years
-              </td>
-            </tr>
-            <tr>
-              <td class="title">
                 Java
               </td>
               <td class="bar">
                 <div class="bar-outer">
-                  <div class="bar-inner awaiting-scroll" data-set-width="50%">
+                  <div class="bar-inner awaiting-scroll" data-set-width="65%">
                   </div>
                 </div>
               </td>
@@ -161,12 +161,12 @@
               </td>
               <td class="bar">
                 <div class="bar-outer">
-                  <div class="bar-inner awaiting-scroll" data-set-width="30%">
+                  <div class="bar-inner awaiting-scroll" data-set-width="60%">
                   </div>
                 </div>
               </td>
               <td class="count">
-                &lt;1&nbsp;Years
+                1+&nbsp;Years
               </td>
             </tr>
           </table>
@@ -195,6 +195,20 @@
               <td class="bar">
                 <div class="bar-outer">
                   <div class="bar-inner awaiting-scroll" data-set-width="85%">
+                  </div>
+                </div>
+              </td>
+              <td class="count">
+                3+&nbsp;Years
+              </td>
+            </tr>
+            <tr>
+              <td class="title">
+                MySQL
+              </td>
+              <td class="bar">
+                <div class="bar-outer">
+                  <div class="bar-inner awaiting-scroll" data-set-width="80%">
                   </div>
                 </div>
               </td>
@@ -237,20 +251,6 @@
               <td class="bar">
                 <div class="bar-outer">
                   <div class="bar-inner awaiting-scroll" data-set-width="60%">
-                  </div>
-                </div>
-              </td>
-              <td class="count">
-                1+&nbsp;Years
-              </td>
-            </tr>
-            <tr>
-              <td class="title">
-                Mysql
-              </td>
-              <td class="bar">
-                <div class="bar-outer">
-                  <div class="bar-inner awaiting-scroll" data-set-width="35%">
                   </div>
                 </div>
               </td>
@@ -319,7 +319,7 @@
           </div>
           <div class="experience-item">
             <div class="experience-bar awaiting-scroll" data-set-width="35px"></div>
-            <h4>Personal&nbsp;Projects</h4>
+            <h4>Personal Projects</h4>
             <p class="sub-title-dates">Hobbyist : 2005&nbsp;-&nbsp;Present</p>
             <p>
               Over a decade ago I was interested in making video games. I took initiative and learned a language called
@@ -332,12 +332,9 @@
       </div>
 
       <div class="segment" id="portfolio">
-        <div>
-          <h3>Portfolio</h3>
-        </div>
-        <h4>Professional&nbsp;Projects</h4>
+        <h3>Professional&nbsp;Projects</h3>
         <div class="row">
-          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+          <div class="col-xs-12 col-sm-4 portfolio-object awaiting-scroll">
             <a href="http://themortgagereports.com/mortgage-calculator" target="_blank">
               <p class="portfolio-title">The&nbsp;Mortgage&nbsp;Reports</p>
               <p class="portfolio-subtitle">Mortgage&nbsp;Calculator</p>
@@ -353,7 +350,7 @@
             </a>
           </div>
 
-          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+          <div class="col-xs-12 col-sm-4 portfolio-object awaiting-scroll">
             <a href="http://nurse.org" target="_blank">
               <p class="portfolio-title">Nurse.org</p>
               <p class="portfolio-subtitle">Home&nbsp;Page</p>
@@ -367,7 +364,7 @@
             </a>
           </div>
 
-          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+          <div class="col-xs-12 col-sm-4 portfolio-object awaiting-scroll">
             <a href="http://www.travelnursing.org/top-10-travel-nursing-states.php#form-top" target="_blank">
               <p class="portfolio-title">TravelNursing.org</p>
               <p class="portfolio-subtitle">Form&nbsp;Page</p>
@@ -380,7 +377,7 @@
             </a>
           </div>
 
-          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+          <div class="col-xs-12 col-sm-4 portfolio-object awaiting-scroll">
             <a href="http://mymortgageinsider.com" target="_blank">
               <p class="portfolio-title">MyMortgageInsider.com</p>
               <p class="portfolio-subtitle">Entire&nbsp;Site</p>
@@ -396,10 +393,10 @@
 
 
         </div>
-        <h4>Personal&nbsp;Projects</h4>
+        <h3>Personal&nbsp;Projects</h3>
         <div class="row">
 
-          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+          <div class="col-xs-12 col-sm-4 portfolio-object awaiting-scroll">
             <a href="http://jsfiddle.net/stevenr4/xzffdxcc/" target="_blank">
               <p class="portfolio-title">Mandelbrot&nbsp;Set</p>
               <p class="portfolio-subtitle">Fractal&nbsp;Rendering</p>
@@ -411,9 +408,7 @@
               </p>
               View&nbsp;Demo
             </a>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+          </div><div class="col-xs-12 col-sm-4 portfolio-object awaiting-scroll">
             <a href="http://lag-pong.herokuapp.com/" target="_blank">
               <p class="portfolio-title">Lag&nbsp;Pong</p>
               <p class="portfolio-subtitle">Real-Time&nbsp;Multiplayer&nbsp;Game</p>
@@ -425,9 +420,7 @@
               </p>
               View&nbsp;Demo
             </a>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+          </div><div class="col-xs-12 col-sm-4 portfolio-object awaiting-scroll">
             <a href="http://jsfiddle.net/stevenr4/w9deox41/" target="_blank">
               <p class="portfolio-title">Sudoku&nbsp;Solver</p>
               <p class="portfolio-subtitle">Logical&nbsp;Puzzle</p>
@@ -439,9 +432,7 @@
               </p>
               View&nbsp;Demo
             </a>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 portfolio-object awaiting-scroll">
+          </div><div class="col-xs-12 col-sm-4 portfolio-object awaiting-scroll">
             <a href="http://jsfiddle.net/stevenr4/pkd0h55m/" target="_blank">
               <p class="portfolio-title">Roman&nbsp;Numeral&nbsp;Calculator</p>
               <p class="portfolio-subtitle">Algorithm</p>
@@ -466,9 +457,9 @@
             Other than programming, I am a maths geek, music enthusiast, pilot-in-training, and a gaming nerd. I love
             calculating out numbers from every day life, odd facts about rubik's cubes and Fibonacci sequence. When it
             comes to music, I am highly proficient in the flute and the drums, but still love to tinker with guitars
-            and ukuleles. As for games, I enjoy almost all video games from all styles, but spend an equal amount of
-            time playing tabletop RPGs with friends. Every Wednesday I go down to my local D&amp;D game store and
-            volunteer for them.<br />
+            and ukuleles. As for games, I enjoy almost all video games from all styles. I can be found leading Destiny
+            raids or playing some off the wall indie game. I also enjoy tabletop RPGs. I love putting together D&amp;D
+            campaigns for my friends and family.<br />
             <br />
             Friends describe me as a funny, informative, logical individual.
           </p>

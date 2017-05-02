@@ -36,13 +36,12 @@ $(document).ready(function(){
         // Handles the header to allow it to follow when needed.
         var viewTop = $(window).scrollTop();
         var elemTop = $('#header-spacer').offset().top;
-        $("#following-header").css('width', $('#header-spacer').width() + "px");
         if (viewTop <= elemTop) {
-            $('#following-header').removeClass('active');
             $("#header-spacer").css('height', "0");
+            $('#following-header').removeClass('active');
         } else {
-            $('#following-header').addClass('active');
             $("#header-spacer").css('height', $('#following-header').outerHeight() + "px");
+            $('#following-header').addClass('active');
         }
 
         var lastSegment = "about";
